@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanker</title>
+    <link rel="icon" href="https://img.favpng.com/2/20/9/google-logo-google-search-search-engine-optimization-google-images-png-favpng-mrjKbWHacks0WiKXmVVZugyri.jpg">
+</head>
+<body>
+    <button onclick="baseballbro()">samepage</button>
+    <button onclick="win()">new window with game</button>
+    <p>https://adanceoffireandice.com/g/41</p>
+    <p>https://ovo-game.github.io/o/archery-world-tour</p>
+    <p>https://www.crazygames.cz/hra/krunker-io</p>
+    <p>https://agar.cc/games/wp-content/themes/googlefreegames/play.php?id=225</p>
+    <p>https://now.gg/</p>
+    <p>https://games.construct.net/4061/58521/embed.html?uid=0&o=1</p>
+    
+    <button onclick="fullscreen()">fullscreen</button>
+    
+    <script>
+        function baseballbro() {
+            var url = window.prompt("url");
+            
+            
+            var iframe = document.createElement('iframe')
+            iframe.style.width = "100%";
+            iframe.style.height = "100vh";
+            iframe.style.border = "none";
+            iframe.src = url
+            iframe.id = "frame"
+            document.body.appendChild(iframe)
+        }
+        function fullscreen(){
+            document.getElementById('frame').requestFullscreen();
+        }
+        function win(){
+            var url = window.prompt("url");
+            var win2 = window.open( "","_blank" ,";lakdsjf");
+            let link = win2.document.createElement('link');
+            link.rel = "icon";
+            link.type = "image/png";
+            link.href = "https://img.favpng.com/2/20/9/google-logo-google-search-search-engine-optimization-google-images-png-favpng-mrjKbWHacks0WiKXmVVZugyri.jpg";
+            win2.document.head.appendChild(link);
+            var iframe = win2.document.createElement('iframe')
+            iframe.style.width = "100%";
+            iframe.style.height = "100vh";
+            iframe.style.border = "none";
+            iframe.src = url
+            iframe.id = "frame"
+            win2.document.body.appendChild(iframe)
+        }
+    </script>
+</body>
+
+</html>
