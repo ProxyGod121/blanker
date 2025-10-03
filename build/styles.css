@@ -25,18 +25,63 @@ body {
     align-items: center; /* Center vertically within this div */
 }
 
+/* Improved Button Styles */
 button {
-    width: 200px;
-    height: 50px;
-    background-color: rgb(0, 242, 251);
-    border-style: none;
-    border-radius: 30px;
-    color: black; /* Changed text color for better contrast */
-    font-size: 1.1em; /* Slightly larger font size */
-    font-weight: bold; /* Make the text bold */
-    cursor: pointer; /* Indicate it's clickable */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 220px;
+    height: 56px;
+    padding: 0 32px;
+    background: linear-gradient(90deg, #00f2fb 0%, #0ff7b7 100%);
+    border: none;
+    border-radius: 36px;
+    color: #101820;
+    font-size: 1.15em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 242, 251, 0.18), 0 1.5px 4px rgba(0,0,0,0.08);
+    outline: none;
+    position: relative;
+    transition: 
+        background 0.25s cubic-bezier(.4,0,.2,1),
+        color 0.2s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.25s cubic-bezier(.4,0,.2,1),
+        transform 0.15s cubic-bezier(.4,0,.2,1);
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #fff 0%, #00f2fb 100%);
+    color: #00f2fb;
+    box-shadow: 0 8px 28px rgba(0, 242, 251, 0.30), 0 2px 8px rgba(0,0,0,0.15);
+    transform: scale(1.04);
+}
+
+button:active {
+    background: linear-gradient(90deg, #0ff7b7 0%, #00f2fb 100%);
+    color: #101820;
+    box-shadow: 0 3px 8px rgba(0, 242, 251, 0.12);
+    transform: scale(0.98);
+}
+
+button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0,242,251,0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, opacity 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+button:active::after {
+    width: 180%;
+    height: 180%;
+    opacity: 0.4;
+    transition: 0s;
 }
 
 #links {
@@ -59,10 +104,4 @@ button {
     display: flex;
     justify-content: center; /* Center content within #center */
     align-items: center; /* Center content within #center */
-}
-
-button:hover {
-    background-color: white;
-    color: rgb(0, 242, 251); /* Change text color on hover for visual feedback */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
