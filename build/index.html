@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanker</title>
     <link rel="icon" href="https://img.favpng.com/2/20/9/google-logo-google-search-search-engine-optimization-google-images-png-favpng-mrjKbWHacks0WiKXmVVZugyri.jpg">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button onclick="baseballbro()">samepage</button>
-    <button onclick="win()">new window with game</button>
-    <p>https://adanceoffireandice.com/g/41</p>
-    <p>https://ovo-game.github.io/o/archery-world-tour</p>
-    <p>https://www.crazygames.cz/hra/krunker-io</p>
-    <p>https://agar.cc/games/wp-content/themes/googlefreegames/play.php?id=225</p>
-    <p>https://now.gg/</p>
-    <p>https://games.construct.net/4061/58521/embed.html?uid=0&o=1</p>
+    <div id="center">
+        <div id="links">
     
-    <button onclick="fullscreen()">fullscreen</button>
+            <p>click button to copy link to clipboard</p>
+            <button onclick="navigator.clipboard.writeText(url1)">fire and ice</button>
+            <button onclick="navigator.clipboard.writeText(url2)">krunker-io</button>
+            <button onclick="navigator.clipboard.writeText(url3)">idk</button>
+            <button onclick="navigator.clipboard.writeText(url4)">wheelie bike</button>
+        </div>
+        <div id="contain">
+
+            <div class="center">
+                
+                <button onclick="baseballbro()">samepage</button>
+            </div>
+            <div class="center">
+                
+                <button onclick="win()">new window with game</button>
+            </div>
+            <div class="center">
+                
+                <button onclick="fullscreen()">fullscreen</button>
+            </div>
+        </div>
+    </div>
+    
     
     <script>
         function baseballbro() {
@@ -51,6 +68,10 @@
             iframe.id = "frame"
             win2.document.body.appendChild(iframe)
         }
+        var url1 = "https://adanceoffireandice.com/g/41";
+        var url2 = "https://www.crazygames.cz/hra/krunker-io";
+        var url3 = "https://agar.cc/games/wp-content/themes/googlefreegames/play.php?id=225";
+        var url4 = "https://games.construct.net/4061/58521/embed.html?uid=0&o=1";
     </script>
 </body>
 

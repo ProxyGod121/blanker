@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0; /* Remove default body margin */
+  overflow: hidden; /* Ensure content doesn't scroll outside the viewport */
+}
+
+#contain {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  flex-direction: column;
+  align-items: center; /* Center vertically for the column layout */
+}
+
+.center {
+  height: 33%;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center horizontally within this div */
+  align-items: center; /* Center vertically within this div */
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(0, 242, 251);
+  border-style: none;
+  border-radius: 30px;
+}
+
+#links {
+  height: 100vh;
+  width: 250px;
+  display: flex;
+  justify-content: center; /* Center items vertically within the flex container */
+  align-items: flex-start; /* Align items to the start (left) horizontally */
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  padding-left: 40px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+#center {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center content within #center */
+  align-items: center; /* Center content within #center */
+}
+
+
+
+button:hover {
+    background-color: white;
+}
