@@ -60,43 +60,33 @@ button {
 button:hover {
     background-color: white;
 }
+/* Navbar styling */
 .navbar {
-    background-color: white;
-    padding: 10px 0;
-    display: flex; /* Add flex to .navbar to manage child alignment */
-    align-items: center; /* Vertically center items within the navbar */
-    justify-content: space-between; /* Distribute space between nav-name and nav-links */
-}
-
-.nav-links {
-    list-style-type: none;
-    color: black;
     display: flex;
-    /* justify-content: flex-end; */ /* This is handled by .navbar's justify-content */
-    margin: 0; /* Remove default margin for ul */
-    padding: 0; /* Remove default padding for ul */
-}
-
-.nav-links a {
-    color: black;
-    text-decoration: none;
-    padding: 15px 10px;
-    font-family: "lexend";
-}
-
-.nav-name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; /* Change to center for vertical alignment */
-    /* height: 100%; */ /* Remove height to allow content-based height */
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;
+    background: #fff;
+    color: #000;
+    font-size: 2rem;
 }
 
 .nav-name li {
-    color: black;
-    list-style-type: none;
+    list-style: none;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #000;
     text-decoration: none;
-    padding: 15px 10px; /* Add padding to match nav-links a */
-    margin: 0; /* Remove default margin for li */
-    font-size: 30px;
-    font-family: "lexend";
+    font-size: 1.2rem;
 }
