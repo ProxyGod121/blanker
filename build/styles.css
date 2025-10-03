@@ -1,107 +1,102 @@
 body {
-    background-color: black;
-    color: white;
-    height: 100vh;
-    width: 100vw;
-    margin: 0; /* Remove default body margin */
-    overflow: hidden; /* Ensure content doesn't scroll outside the viewport */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A cleaner, modern font */
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0; /* Remove default body margin */
+  overflow: hidden; /* Ensure content doesn't scroll outside the viewport */
 }
 
 #contain {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    flex-direction: column;
-    align-items: center; /* Center vertically for the column layout */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  flex-direction: column;
+  align-items: center; /* Center vertically for the column layout */
 }
 
 .center {
-    height: 33%;
-    width: 100vw;
-    display: flex;
-    justify-content: center; /* Center horizontally within this div */
-    align-items: center; /* Center vertically within this div */
+  height: 25%;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center horizontally within this div */
+  align-items: center; /* Center vertically within this div */
 }
 
-/* Improved Button Styles */
 button {
-    width: 220px;
-    height: 56px;
-    padding: 0 32px;
-    background: linear-gradient(90deg, #00f2fb 0%, #0ff7b7 100%);
-    border: none;
-    border-radius: 36px;
-    color: #101820;
-    font-size: 1.15em;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0, 242, 251, 0.18), 0 1.5px 4px rgba(0,0,0,0.08);
-    outline: none;
-    position: relative;
-    transition: 
-        background 0.25s cubic-bezier(.4,0,.2,1),
-        color 0.2s cubic-bezier(.4,0,.2,1),
-        box-shadow 0.25s cubic-bezier(.4,0,.2,1),
-        transform 0.15s cubic-bezier(.4,0,.2,1);
-}
-
-button:hover, button:focus {
-    background: linear-gradient(90deg, #fff 0%, #00f2fb 100%);
-    color: #00f2fb;
-    box-shadow: 0 8px 28px rgba(0, 242, 251, 0.30), 0 2px 8px rgba(0,0,0,0.15);
-    transform: scale(1.04);
-}
-
-button:active {
-    background: linear-gradient(90deg, #0ff7b7 0%, #00f2fb 100%);
-    color: #101820;
-    box-shadow: 0 3px 8px rgba(0, 242, 251, 0.12);
-    transform: scale(0.98);
-}
-
-button::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(0,242,251,0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s, opacity 0.2s;
-    opacity: 0;
-    pointer-events: none;
-}
-
-button:active::after {
-    width: 180%;
-    height: 180%;
-    opacity: 0.4;
-    transition: 0s;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(0, 242, 251);
+  border-style: none;
+  border-radius: 30px;
+  font-family: "lexend";
 }
 
 #links {
-    height: 100vh;
-    width: 250px;
-    display: flex;
-    justify-content: center; /* Center items vertically within the flex container */
-    align-items: flex-start; /* Align items to the start (left) horizontally */
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    padding-left: 40px;
-    box-sizing: border-box;
-    gap: 30px;
+  height: 100vh;
+  width: 250px;
+  display: flex;
+  justify-content: center; /* Center items vertically within the flex container */
+  align-items: flex-start; /* Align items to the start (left) horizontally */
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  padding-left: 40px;
+  box-sizing: border-box;
+  gap: 30px;
 }
 
 #center {
-    height: 100%;
-    width: 100vw;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center content within #center */
+  align-items: center; /* Center content within #center */
+}
+
+
+
+button:hover {
+    background-color: white;
+}
+.navbar {
+    background-color: white;
+    padding: 10px 0;
+    display: flex; /* Add flex to .navbar to manage child alignment */
+    align-items: center; /* Vertically center items within the navbar */
+    justify-content: space-between; /* Distribute space between nav-name and nav-links */
+}
+
+.nav-links {
+    list-style-type: none;
+    color: black;
     display: flex;
-    justify-content: center; /* Center content within #center */
-    align-items: center; /* Center content within #center */
+    /* justify-content: flex-end; */ /* This is handled by .navbar's justify-content */
+    margin: 0; /* Remove default margin for ul */
+    padding: 0; /* Remove default padding for ul */
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 15px 10px;
+    font-family: "lexend";
+}
+
+.nav-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Change to center for vertical alignment */
+    /* height: 100%; */ /* Remove height to allow content-based height */
+}
+
+.nav-name li {
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 15px 10px; /* Add padding to match nav-links a */
+    margin: 0; /* Remove default margin for li */
+    font-size: 30px;
+    font-family: "lexend";
 }
