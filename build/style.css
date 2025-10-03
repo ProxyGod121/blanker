@@ -1,4 +1,4 @@
-.btn-links {
+.btn-links > *{
     height: 100vh;
     width: 100vw;
     margin-top: 30px;
