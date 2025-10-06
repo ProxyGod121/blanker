@@ -102,25 +102,25 @@
         font-family: "Lexend", sans-serif;
     }
 
-    .btn-links {
-        height: calc(100vh - 60px); /* Account for navbar height */
-        width: 100vw;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        /* minmax to keep buttons wide enough, auto-fit to fill available columns */
-        justify-items: center;
-        align-items: center;
-        gap: 30px 20px; /* row gap, column gap */
-        margin: 0 auto;
-        padding: 40px 20px 20px 20px;
-        box-sizing: border-box;
-        overflow: hidden; /* Hide overflow of the button area */
-    }
-
     #none {
         text-decoration: none;
     }
+ .btn-links {
+    height: calc(100vh - 60px); /* Account for navbar height */
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, 1fr); /* 5 rows, so 2 columns for 10 buttons */
+    justify-content: center;
+    align-items: center;
+    gap: 30px 20px; /* row gap, column gap */
+    margin: 0 auto;
+    padding: 40px 20px 20px 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow of the button area */
+}
 </style>
+
 <body>
     <nav class="navbar">
         <div class="nav-name">
@@ -156,4 +156,3 @@
         var url10 = "https://capprime.evenpixels.com/";
     </script>
 </body>
-</html>
