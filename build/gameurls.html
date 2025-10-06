@@ -12,131 +12,114 @@
     <link rel="icon" href="https://img.favpng.com/2/20/9/google-logo-google-search-search-engine-optimization-google-images-png-favpng-mrjKbWHacks0WiKXmVVZugyri.jpg">
 </head>
 <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
     body {
-  background-color: black;
-  color: white;
-  height: 100vh;
-  width: 100vw;
-  margin: 0; /* Remove default body margin */
-  
-}
+        background-color: black;
+        color: white;
+        height: 100vh;
+        width: 100vw;
+        margin: 0; /* Remove default body margin */
+        overflow: hidden; /* Hide overflow as requested */
+        font-family: "Lexend", sans-serif;
+    }
 
-#contain {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  flex-direction: column;
-  align-items: center; /* Center vertically for the column layout */
-}
+    #contain {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        flex-direction: column;
+        align-items: center; /* Center vertically for the column layout */
+    }
 
-.center {
-  height: 25%;
-  width: 100vw;
-  display: flex;
-  justify-content: center; /* Center horizontally within this div */
-  align-items: center; /* Center vertically within this div */
-}
+    .center {
+        height: 25%;
+        width: 100vw;
+        display: flex;
+        justify-content: center; /* Center horizontally within this div */
+        align-items: center; /* Center vertically within this div */
+    }
 
-button {
-  width: 200px;
-  height: 50px;
-  background-color: rgb(0, 242, 251);
-  border-style: none;
-  border-radius: 30px;
-  font-family: "lexend";
-}
+    button {
+        width: 200px;
+        height: 50px;
+        background-color: rgb(0, 242, 251);
+        border-style: none;
+        border-radius: 30px;
+        font-family: "Lexend", sans-serif;
+        font-size: 1rem;
+        margin: 0;
+        transition: background 0.2s;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
 
-#links {
-  height: 100vh;
-  width: 250px;
-  display: flex;
-  justify-content: center; /* Center items vertically within the flex container */
-  align-items: flex-start; /* Align items to the start (left) horizontally */
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  padding-left: 40px;
-  box-sizing: border-box;
-  gap: 30px;
-}
+    button:hover {
+        background-color: white;
+        color: black;
+    }
 
-#center {
-  height: 100%;
-  width: 100vw;
-  display: flex;
-  justify-content: center; /* Center content within #center */
-  align-items: center; /* Center content within #center */
-}
+    .navbar {
+        background-color: white;
+        padding: 10px 0;
+        display: flex; /* Add flex to .navbar to manage child alignment */
+        align-items: center; /* Vertically center items within the navbar */
+        justify-content: space-between; /* Distribute space between nav-name and nav-links */
+    }
 
+    .nav-links {
+        list-style-type: none;
+        color: black;
+        display: flex;
+        margin: 0; /* Remove default margin for ul */
+        padding: 0; /* Remove default padding for ul */
+    }
 
+    .nav-links a {
+        color: black;
+        text-decoration: none;
+        padding: 15px 10px;
+        font-family: "Lexend", sans-serif;
+    }
 
-button:hover {
-    background-color: white;
-}
-.navbar {
-    background-color: white;
-    padding: 10px 0;
-    display: flex; /* Add flex to .navbar to manage child alignment */
-    align-items: center; /* Vertically center items within the navbar */
-    justify-content: space-between; /* Distribute space between nav-name and nav-links */
-}
+    .nav-name {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
-.nav-links {
-    list-style-type: none;
-    color: black;
-    display: flex;
-    /* justify-content: flex-end; */ /* This is handled by .navbar's justify-content */
-    margin: 0; /* Remove default margin for ul */
-    padding: 0; /* Remove default padding for ul */
-}
+    .nav-name li {
+        color: black;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 15px 10px;
+        margin: 0;
+        font-size: 30px;
+        font-family: "Lexend", sans-serif;
+    }
 
-.nav-links a {
-    color: black;
-    text-decoration: none;
-    padding: 15px 10px;
-    font-family: "lexend";
-}
+    .btn-links {
+        height: calc(100vh - 60px); /* Account for navbar height */
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        /* minmax to keep buttons wide enough, auto-fit to fill available columns */
+        justify-items: center;
+        align-items: center;
+        gap: 30px 20px; /* row gap, column gap */
+        margin: 0 auto;
+        padding: 40px 20px 20px 20px;
+        box-sizing: border-box;
+        overflow: hidden; /* Hide overflow of the button area */
+    }
 
-.nav-name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; /* Change to center for vertical alignment */
-    /* height: 100%; */ /* Remove height to allow content-based height */
-}
-
-.nav-name li {
-    color: black;
-    list-style-type: none;
-    text-decoration: none;
-    padding: 15px 10px; /* Add padding to match nav-links a */
-    margin: 0; /* Remove default margin for li */
-    font-size: 30px;
-    font-family: "lexend";
-}
-    .btn-links  {
-    height: 100vh;
-    width: 100vw;
-    
-    display: flex;
-    flex-direction:coulum;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    margin-left: 30px;
-    flex-wrap:wrap;
-
-
-}
-
-button {
-    font-family: "lexend";
-}
-
-#none {
-    text-decoration: none;
-    
-}
+    #none {
+        text-decoration: none;
+    }
 </style>
 <body>
     <nav class="navbar">
@@ -149,34 +132,28 @@ button {
         </ul>
     </nav>
     <div class="btn-links">
-        
-
-            <button onclick="navigator.clipboard.writeText(url1)">fire and ice</button>
-            <button onclick="navigator.clipboard.writeText(url2)">krunker-io</button>
-            <button onclick="navigator.clipboard.writeText(url3)">idk</button>
-            <button onclick="navigator.clipboard.writeText(url4)">wheelie bike</button>
-            <button onclick="navigator.clipboard.writeText(url5)">drive mad</button>
-            <button onclick="navigator.clipboard.writeText(url6)">baseball bros</button>
-            <button onclick="navigator.clipboard.writeText(url7)">basketball random</button>
-            <button onclick="navigator.clipboard.writeText(url8)">football bros</button>
-            <button onclick="navigator.clipboard.writeText(url9)">retrobowl</button>
-            <button onclick="navigator.clipboard.writeText(url9)">capprime</button>
-            
-        
+        <button onclick="navigator.clipboard.writeText(url1)">fire and ice</button>
+        <button onclick="navigator.clipboard.writeText(url2)">krunker-io</button>
+        <button onclick="navigator.clipboard.writeText(url3)">idk</button>
+        <button onclick="navigator.clipboard.writeText(url4)">wheelie bike</button>
+        <button onclick="navigator.clipboard.writeText(url5)">drive mad</button>
+        <button onclick="navigator.clipboard.writeText(url6)">baseball bros</button>
+        <button onclick="navigator.clipboard.writeText(url7)">basketball random</button>
+        <button onclick="navigator.clipboard.writeText(url8)">football bros</button>
+        <button onclick="navigator.clipboard.writeText(url9)">retrobowl</button>
+        <button onclick="navigator.clipboard.writeText(url10)">capprime</button>
     </div>
     <script>
-       
         var url1 = "https://adanceoffireandice.com/g/41";
         var url2 = "https://www.crazygames.cz/hra/krunker-io";
         var url3 = "https://agar.cc/games/wp-content/themes/googlefreegames/play.php?id=225";
         var url4 = "https://games.construct.net/4061/58521/embed.html?uid=0&o=1";
-        var url5 = "https://drive-madgame.github.io/file"
-        var url6 = "https://iogames.onl/baseball-bros.embed"
-        var url7 = "https://tylerpalko.github.io/gamehub/basketrandom/"
-        var url8 = "https://footballbros.io"
-        var url9 = "https://retrobowlonline.io/play/retro-bowl.embed"
-        var url10 = "https://capprime.evenpixels.com/"
+        var url5 = "https://drive-madgame.github.io/file";
+        var url6 = "https://iogames.onl/baseball-bros.embed";
+        var url7 = "https://tylerpalko.github.io/gamehub/basketrandom/";
+        var url8 = "https://footballbros.io";
+        var url9 = "https://retrobowlonline.io/play/retro-bowl.embed";
+        var url10 = "https://capprime.evenpixels.com/";
     </script>
-
 </body>
 </html>
