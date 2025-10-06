@@ -114,16 +114,17 @@ button:hover {
     font-size: 30px;
     font-family: "lexend";
 }
-    .btn-links > * {
+    .btn-links  {
     height: 100vh;
     width: 100vw;
     
     display: flex;
-    
+    flex-direction:coulum;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
     margin-left: 30px;
+    flex-wrap:wrap;
 
 
 }
@@ -148,7 +149,7 @@ button {
         </ul>
     </nav>
     <div class="btn-links">
-        <a id="none" href="index.html">
+        
 
             <button onclick="navigator.clipboard.writeText(url1)">fire and ice</button>
             <button onclick="navigator.clipboard.writeText(url2)">krunker-io</button>
@@ -160,7 +161,7 @@ button {
             <button onclick="navigator.clipboard.writeText(url8)">football bros</button>
             <button onclick="navigator.clipboard.writeText(url9)">retrobowl</button>
             
-        </a>
+        
     </div>
     <script>
        
